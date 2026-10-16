@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Academic Board</title>
+    <link rel="stylesheet" href="/styles.css">
+    <script src="/app.js" defer></script>
+  </head>
+  <body>
+    <main class="shell">
+      <header class="hero">
+        <div><p class="eyebrow">STUDENT CONTROL CENTER</p><h1>Academic Board</h1><p>Keep coursework and deadlines in one place.</p></div>
+        <span class="badge">Local dashboard</span>
+      </header>
+      <section class="metrics" aria-label="Task summary">
+        <article class="metric"><span>Total tasks</span><strong id="total">0</strong></article>
+        <article class="metric"><span>To do</span><strong id="pending">0</strong></article>
+        <article class="metric"><span>Completed</span><strong id="completed">0</strong></article>
+      </section>
+      <div class="grid">
+        <section class="panel">
+          <h2>Add a task</h2>
+          <form id="task-form">
+            <label>Task title<input name="title" maxlength="120" placeholder="e.g. Finish lab report" required></label>
+            <label>Course<input name="course" maxlength="80" placeholder="e.g. Computer Science"></label>
+            <label>Due date<input name="dueDate" type="date"></label>
+            <button type="submit">Add task</button>
+          </form>
+        </section>
+        <section class="panel tasks-panel">
+          <div class="section-head"><h2>My tasks</h2><span id="count-label" class="muted">0 items</span></div>
+          <p id="message" role="status" class="message" hidden></p>
+          <ul id="task-list" class="task-list"></ul>
+          <p id="empty" class="empty">No tasks yet. Add your first task to get started.</p>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>
